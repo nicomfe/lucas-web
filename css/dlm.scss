@@ -1,0 +1,358 @@
+$stripe-height: 60px;
+
+/** GENERAL STARTS**/
+.section-description {
+  margin: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  svg {
+    margin-top: 15px;
+    height: 50px;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    svg {
+      margin-top: 0;
+      height: 100px;
+    }
+  }
+}
+
+.jumbotron {
+  p {
+    font-size: 16px !important;
+    opacity: 0.8;
+  }
+}
+
+.remove-right-padding {
+  padding-right: 0;
+}
+.bottom-shadow {
+  box-shadow: 2px 3px 3px rgba(0,0,0,0.4);
+}
+
+.hero-message-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  display: block;
+  max-width: 500px;
+  div + div {
+    margin-top: 20px;
+  }
+}
+
+h1 {
+  color: $white;
+  font-size: 30px;
+  line-height: 1.85em;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+  span {
+    background-color: $secondary-transparent;
+    box-decoration-break: clone;
+    padding: 5px 15px;
+  }
+}
+
+h2 {
+  color: $white;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 0px;
+  margin: 5px 0;
+}
+h3 {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 0;
+}
+
+.hero-section {
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 25px;
+    }
+    h2 {
+      font-size: 13px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+  }
+}
+
+h1, h3, h2 {
+  a, a:hover, a:active, a:visited, a:focus {
+    color: $white;
+    text-decoration: none;
+  }
+}
+/** GENERAL ENDS **/
+
+/** HERO STARTS **/
+.navbar-toggle,
+.navbar-toggle:hover,
+.navbar-toggle:active,
+.navbar-toggle:focus {
+  background-color: transparent !important;
+  margin-right: -15px;
+  margin-top: 14px;
+  border-color: $white;
+  .icon-bar {
+    background-color: $white !important;
+  }
+}
+.navbar-nav{
+  >li>a>h3 {
+    line-height: 35px;
+    text-transform: uppercase;
+  }
+  >li {
+    opacity: 0.9;
+    margin: 0 10px;
+    &:hover {
+      opacity: 1;
+    }
+    a:last-child {
+      margin-right: -15px;
+    }
+  }
+  .menu-item-icon {
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+.navbar-collapse {
+  float: right;
+  height: $stripe-height;
+  a {
+    color: $white !important;
+  }
+}
+
+.collapsing, .collapse.in {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $primary-transparent;
+    margin-top: $stripe-height;
+    display: table;
+}
+
+.logo {
+  background-image: url('../images/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: $stripe-height;
+  width: 100px;
+}
+
+.hero-stripe {
+  position: absolute;
+  background-color: $primary-transparent;
+  border: none;
+  height: $stripe-height;
+  width: 100%;
+}
+
+.hero-stripe-bottom {
+  @extend .hero-stripe;
+  margin-top: -$stripe-height;
+  color: $white;
+  @media(max-width: 768px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .left-content {
+    flex: 1;
+    text-align: left;
+  }
+  .center-content {
+    text-align: center;
+  }
+  .right-content {
+    flex: 1;
+    text-align: right;
+  }
+  .container {
+    height: $stripe-height;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  .visits-text {
+    letter-spacing: 2.2px;
+  }
+  @media(min-width: 768px) {
+    .container {
+      align-items: flex-start;
+    }
+    .visits-text {
+      letter-spacing: 2.4px;
+    }
+  }
+}
+
+.hero-banner {
+  background: url('../images/hero.jpg');
+  background-filter: blur(2px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+.left-content, .right-content {
+  font-family: "Arial Black", sans-serif;
+}
+
+.free-text {
+  letter-spacing: 1.3px;
+  line-height: 1.3em;
+}
+.visits-text {
+  letter-spacing: 3px;
+}
+.phone-text {
+  line-height: 1.3em;
+  letter-spacing: 1px;
+}
+.email-text {
+  letter-spacing: 0.6px;
+}
+
+/** HERO ENDS **/
+
+.body-content {
+  margin-top: 120px;
+  h2 {
+    color: $primary;
+    opacity: 0.8;
+  }
+  .under-line {
+    background: $primary;
+    width: 50px;
+    height: 3px;
+    opacity: 0.6;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+  .jumbotron {
+    background: transparent;
+    padding: 40px 0;
+  }
+}
+.section-title {
+  margin: 30px 0;
+}
+
+/** CONTACT STARTS **/
+.contact-bottom-bar {
+  margin-top: 30px;
+}
+
+.contact-section {
+  a {
+    color: $secondary;
+    text-decoration: none;
+  }
+  .accent-button {
+    display: block;
+    margin: 0 auto;
+    @media(min-width: 768px) {
+      float: left;
+    }
+  }
+  .contact-message {
+    padding-top: 10px;
+    text-align: center;
+    &.error-message {
+      color: $warning;
+    }
+    &.success-message {
+      font-weight: bold;
+      color: $primary;
+    }
+  }
+}
+.input-group-addon {
+  background: transparent;
+  color: $secondary;
+}
+/* Color of invalid field */
+.has-error .control-label,
+.has-error .help-block,
+.has-error .form-control-feedback {
+    color: $warning !important;
+}
+
+.input-group-addon,
+.form-control,
+.has-error .form-control,
+.has-error .input-group-addon,
+.has-success .input-group-addon,
+.has-error .form-control:focus,
+.has-success .form-control,
+.has-success .form-control:focus {
+  font-size: 16px;
+  box-shadow: none;
+  border-color: $secondary !important;
+  color: $secondary !important;
+  background-color: inherit;
+}
+/** CONTACT ENDS **/
+
+/** BUTTONS STARTS **/
+.accent-button {
+  color: $secondary !important;
+  border-radius: 1px;
+  background-color: $accent;
+  border: solid 1px $accent;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 100px;
+  &:hover {
+    background-color: lighten($accent, 15);
+    color: darken($secondary, 15) !important;
+  }
+}
+.accent-menu {
+  a, h3 {
+    color: $accent !important;
+  }
+}
+/** BUTTONS ENDS **/
+
+/** FOTORAMA STARTS **/
+.fotorama__thumb-border {
+  border-color: $primary !important;
+}
+/** FOTORAMA ENDS**/
+
+/** FOOTER STARTS **/
+.footer {
+  background-color: $primary !important;
+  opacity: 0.8;
+  height: 80px;
+  padding: 15px 0 !important;
+  color: $white !important;
+  letter-spacing: 1px;
+  margin-top: 80px;
+  p {
+    opacity: 0.5;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+/** FOOTER ENDS **/
